@@ -11,13 +11,16 @@ public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "user_id")
     private Long id;
 
     private String name;
 
-    private LocalDate registerDate;
+    @Column(name = "date_of_registration")
+    private LocalDate registrationDate;
 
     @Enumerated(EnumType.STRING)
+    @Column(name = "user_status")
     private UserStatus userStatus;
 
     @OneToMany(mappedBy = "user", cascade = CascadeType.PERSIST)
@@ -26,9 +29,9 @@ public class User {
     public User() {
     }
 
-    public User(String name, LocalDate registerDate) {
+    public User(String name, LocalDate registrationDate) {
         this.name = name;
-        this.registerDate = registerDate;
+        this.registrationDate = registrationDate;
         this.userStatus = UserStatus.BEGINNER;
     }
 
@@ -53,12 +56,12 @@ public class User {
         this.name = name;
     }
 
-    public LocalDate getRegisterDate() {
-        return registerDate;
+    public LocalDate registrationDate() {
+        return registrationDate;
     }
 
-    public void setRegisterDate(LocalDate registerDate) {
-        this.registerDate = registerDate;
+    public void setRegisterDate(LocalDate registrationDate) {
+        this.registrationDate = registrationDate;
     }
 
     public UserStatus getUserStatus() {

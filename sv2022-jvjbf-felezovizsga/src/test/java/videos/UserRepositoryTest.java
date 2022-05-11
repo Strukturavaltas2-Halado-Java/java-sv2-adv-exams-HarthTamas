@@ -83,6 +83,7 @@ class UserRepositoryTest {
         john.addVideo(basketballVideo);
 
         jack.addVideo(titanicVideo);
+
         repository.saveUser(john);
         repository.saveUser(jack);
         repository.saveUser(jane);

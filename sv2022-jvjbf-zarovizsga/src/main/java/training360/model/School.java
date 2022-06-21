@@ -16,7 +16,7 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name="school")
+@Table(name="schools")
 public class School {
 
     @Id
@@ -34,7 +34,7 @@ public class School {
     @AttributeOverride(name="houseNumber", column=@Column(name="house_nr"))
     private Address address;
 
-    @OneToMany(mappedBy = "school", cascade = CascadeType.REMOVE)
+    @OneToMany(mappedBy = "school")
     @JsonManagedReference
     private List<Student> students = new ArrayList<>();
 

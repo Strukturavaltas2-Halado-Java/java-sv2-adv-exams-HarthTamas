@@ -1,4 +1,4 @@
-CREATE TABLE school
+CREATE TABLE schools
 (
     id          BIGINT AUTO_INCREMENT NOT NULL,
     school_name VARCHAR(255)          NULL,
@@ -20,7 +20,4 @@ CREATE TABLE students
 );
 
 ALTER TABLE students
-    ADD CONSTRAINT FK_STUDENTS_ON_SCHOOL FOREIGN KEY (school_id) REFERENCES school (id);
-
-ALTER TABLE students
-    ADD CONSTRAINT FK_STUDENTS_ON_SCHOOL FOREIGN KEY (school_id) REFERENCES school (id);
+    ADD CONSTRAINT FK_STUDENTS_ON_SCHOOL FOREIGN KEY (school_id) REFERENCES schools (id);

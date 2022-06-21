@@ -31,6 +31,12 @@ public class Student {
     @Column(name="school_age_status")
     private SchoolAgeStatus schoolAgeStatus;
 
+    public Student(String name, LocalDate dateOfBirth, SchoolAgeStatus schoolAgeStatus) {
+        this.name = name;
+        this.dateOfBirth = dateOfBirth;
+        this.schoolAgeStatus = schoolAgeStatus;
+    }
+
     @ManyToOne
     @JoinColumn(name = "school_id")
     @JsonBackReference

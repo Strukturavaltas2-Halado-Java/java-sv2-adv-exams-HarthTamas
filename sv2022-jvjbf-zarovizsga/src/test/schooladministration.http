@@ -1,13 +1,13 @@
-GET http://localhost:8080/api/schools?city=Veszprém
+GET http://localhost:8080/api/schools?city=miskolc
 Accept: application/json
 
 ###
-POST http://localhost:8080/api/schools/8/students
+POST http://localhost:8080/api/schools/1/students
 Content-Type: application/json
 
 {
   "name": "Jack",
-  "dateOfBirth": "2013-06-14"
+  "dateOfBirth": "2006-06-25"
 }
 
 ###
@@ -15,13 +15,13 @@ POST http://localhost:8080/api/schools
 Content-Type: application/json
 
 {
-  "schoolName": "",
+  "schoolName": "Radnóti Miklós School",
   "postalCode": "8000",
-  "city": "Veszprém",
+  "city": "Miskolc",
   "street": "Radnóti M.",
   "houseNumber": 7
 }
 
 ###
-PUT http://localhost:8080/api/schools/1/students/3
+PUT http://localhost:8080/api/schools/31/students/2
 Content-Type: application/json

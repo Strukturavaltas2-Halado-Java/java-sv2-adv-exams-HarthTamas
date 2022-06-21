@@ -17,9 +17,9 @@ import java.time.LocalDate;
 @Setter
 public class StudentDto {
 
-
+    private String name;
     private Long id;
     private LocalDate dateOfBirth;
     private SchoolAgeStatus schoolAgeStatus;
-    private School school;
+
 }

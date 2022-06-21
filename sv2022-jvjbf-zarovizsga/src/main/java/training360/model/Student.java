@@ -22,6 +22,8 @@ public class Student {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    private String name;
+
     @Column(name="date_of_birth")
     private LocalDate dateOfBirth;
 

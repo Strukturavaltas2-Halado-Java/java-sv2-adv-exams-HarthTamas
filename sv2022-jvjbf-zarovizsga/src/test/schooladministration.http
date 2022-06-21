@@ -15,7 +15,7 @@ POST http://localhost:8080/api/schools
 Content-Type: application/json
 
 {
-  "schoolName": "Radnóti Miklós School",
+  "schoolName": "",
   "postalCode": "8000",
   "city": "Veszprém",
   "street": "Radnóti M.",

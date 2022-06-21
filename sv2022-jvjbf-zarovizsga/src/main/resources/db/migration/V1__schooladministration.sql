@@ -12,11 +12,15 @@ CREATE TABLE school
 CREATE TABLE students
 (
     id                BIGINT AUTO_INCREMENT NOT NULL,
+    name              VARCHAR(255)          NULL,
     date_of_birth     date                  NULL,
     school_age_status VARCHAR(255)          NULL,
     school_id         BIGINT                NULL,
     CONSTRAINT pk_students PRIMARY KEY (id)
 );
+
+ALTER TABLE students
+    ADD CONSTRAINT FK_STUDENTS_ON_SCHOOL FOREIGN KEY (school_id) REFERENCES school (id);
 
 ALTER TABLE students
     ADD CONSTRAINT FK_STUDENTS_ON_SCHOOL FOREIGN KEY (school_id) REFERENCES school (id);

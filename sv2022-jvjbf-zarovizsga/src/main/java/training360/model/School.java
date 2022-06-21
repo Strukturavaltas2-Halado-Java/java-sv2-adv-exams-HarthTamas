@@ -38,6 +38,10 @@ public class School {
     @JsonManagedReference
     private List<Student> students = new ArrayList<>();
 
+    public School(String schoolName, Address address) {
+        this.schoolName = schoolName;
+        this.address = address;
+    }
 
     public void addStudent(Student student) {
         students.add(student);

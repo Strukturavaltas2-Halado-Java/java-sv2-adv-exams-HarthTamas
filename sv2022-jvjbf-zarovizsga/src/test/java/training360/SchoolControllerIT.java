@@ -88,7 +88,6 @@ class SchoolControllerIT {
                 .getViolations().get(0).getMessage();
 
         assertEquals("Student name cannot be blank!", message);
-
     }
 
     @Test

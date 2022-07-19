@@ -2,8 +2,8 @@ package sportresults.controller;
 
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
-import sportresults.DTO.ResultDTO;
-import sportresults.DTO.UpdateMeasureCommand;
+import sportresults.dto.ResultDto;
+import sportresults.dto.UpdateMeasureCommand;
 import sportresults.service.SportResultService;
 
 import javax.validation.Valid;
@@ -19,12 +19,12 @@ public class ResultController {
     private SportResultService service;
 
     @PutMapping("/{id}")
-    public ResultDTO updateResult(@PathVariable Long id, @Valid @RequestBody UpdateMeasureCommand command) {
+    public ResultDto updateResult(@PathVariable Long id, @Valid @RequestBody UpdateMeasureCommand command) {
         return service.updateResult(id, command);
     }
 
     @GetMapping
-    public List<ResultDTO> getResults (@RequestParam Optional<String> sportType) {
+    public List<ResultDto> getResults (@RequestParam Optional<String> sportType) {
         return service.getResults(sportType);
     }
 

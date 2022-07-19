@@ -1,10 +1,9 @@
-package sportresults.DTO;
+package sportresults.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import sportresults.model.Result;
 import sportresults.model.Sex;
 
 import java.util.List;
@@ -18,6 +17,6 @@ public class AthleteDto {
     private Long id;
     private String name;
     private Sex sex;
-    private List<ResultDTO> results;
+    private List<ResultDto> results;
 
 }

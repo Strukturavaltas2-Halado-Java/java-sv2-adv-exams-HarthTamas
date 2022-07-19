@@ -3,9 +3,9 @@ package sportresults.controller;
 import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
-import sportresults.DTO.AthleteDto;
-import sportresults.DTO.CreateAthleteCommand;
-import sportresults.DTO.CreateResultCommand;
+import sportresults.dto.AthleteDto;
+import sportresults.dto.CreateAthleteCommand;
+import sportresults.dto.CreateResultCommand;
 import sportresults.service.SportResultService;
 
 import javax.validation.Valid;

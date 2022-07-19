@@ -1,4 +1,4 @@
-package sportresults.DTO;
+package sportresults.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

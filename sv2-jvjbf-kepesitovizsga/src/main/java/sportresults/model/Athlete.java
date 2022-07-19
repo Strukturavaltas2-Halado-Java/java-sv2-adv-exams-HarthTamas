@@ -31,6 +31,11 @@ public class Athlete {
     @JsonManagedReference
     private List<Result> results = new ArrayList<>();
 
+    public Athlete(String name, Sex sex) {
+        this.name = name;
+        this.sex = sex;
+    }
+
     public void addResult(Result result) {
         results.add(result);
         result.setAthlete(this);

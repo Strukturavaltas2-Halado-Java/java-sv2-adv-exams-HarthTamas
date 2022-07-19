@@ -21,8 +21,13 @@ public class Result {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    private String place;
+
     @Column(name = "result_date")
     private LocalDate resultDate;
+
+    @Enumerated(EnumType.STRING)
+    private SportType sportType;
 
     private double measure;
 
@@ -35,4 +40,11 @@ public class Result {
     private Athlete athlete;
 
 
+    public Result(String place, LocalDate resultDate, SportType sportType, double measure) {
+        this.place = place;
+        this.resultDate = resultDate;
+        this.sportType = sportType;
+        this.measure = measure;
+        this.measureUnit = sportType.getMeasureUnit();
+    }
 }

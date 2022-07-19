@@ -3,7 +3,7 @@ package sportresults.model;
 import lombok.Getter;
 
 @Getter
-public enum sportType {
+public enum SportType {
 
     SWIMMING('s'),
     RUNNING('s'),
@@ -12,7 +12,7 @@ public enum sportType {
 
     private final char measureUnit;
 
-    sportType(char measureUnit) {
+    SportType(char measureUnit) {
         this.measureUnit = measureUnit;
     }
 }

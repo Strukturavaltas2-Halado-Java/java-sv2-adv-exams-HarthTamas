@@ -18,7 +18,7 @@ Content-Type: application/json
   "sex": "MALE"
 }
 ### Eredmény hozzáadása sportolóhoz
-POST http://localhost:8080/api/athletes/42/results
+POST http://localhost:8080/api/athletes/1/results
 Accept: application/json
 Content-Type: application/json
 
@@ -62,11 +62,12 @@ Content-Type: application/json
   "measure": -1.0
 }
 ### Eredmény frissítése
-PUT http://localhost:8080/api/results/67
+PUT http://localhost:8080/api/results/1
 Content-Type: application/json
+Accept: application/json
 
 {
-  "measure": 123344
+  "measure": 123
 }
 ### Eredmény frissítése, rossz id
 PUT http://localhost:8080/api/results/1000

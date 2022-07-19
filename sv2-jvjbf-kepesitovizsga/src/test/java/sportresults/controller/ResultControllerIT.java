@@ -7,6 +7,8 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.jdbc.Sql;
 import org.springframework.test.web.reactive.server.WebTestClient;
 import org.zalando.problem.Problem;
+import sportresults.DTO.AthleteDto;
+import sportresults.DTO.CreateResultCommand;
 import sportresults.dto.*;
 import sportresults.model.Sex;
 import sportresults.model.SportType;

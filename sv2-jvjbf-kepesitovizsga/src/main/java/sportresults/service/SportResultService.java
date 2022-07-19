@@ -35,8 +35,8 @@ public class SportResultService {
     public AthleteDto addResultToAthlete(Long athleteId, CreateResultCommand command) {
         Athlete athlete = athleteRepository.findById(athleteId).orElseThrow(() -> new AthleteNotFoundException(athleteId));
         Result result = new Result(command.getPlace(), command.getResultDate(), command.getSportType(), command.getMeasure());
-        athlete.addResult(result);
         resultRepository.save(result);
+        athlete.addResult(result);
         return modelMapper.map(athlete, AthleteDto.class);
     }
 

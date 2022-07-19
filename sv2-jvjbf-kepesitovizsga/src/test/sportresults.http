@@ -18,7 +18,7 @@ Content-Type: application/json
   "sex": "MALE"
 }
 ### Eredmény hozzáadása sportolóhoz
-POST http://localhost:8080/api/athletes/1/results
+POST http://localhost:8080/api/athletes/19/results
 Accept: application/json
 Content-Type: application/json
 
